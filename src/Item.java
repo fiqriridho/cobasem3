@@ -52,7 +52,15 @@ public class Item implements Dijual {
     public int getStok() { return stok; }
 
     /** @param stok Mengatur jumlah stok item */
-    public void setStok(int stok) { this.stok = stok; }
+    public void setStok(int stok) {
+        if (stok < 0) {
+            System.out.println("Stok tidak boleh negatif. Nilai otomatis diset ke 0.");
+            this.stok = 0;
+        } else {
+            this.stok = stok;
+        }
+    }
+
 
     /**
      * Menghitung harga item setelah diskon.

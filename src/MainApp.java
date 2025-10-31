@@ -10,7 +10,7 @@ public class MainApp {
         item1.displayDetails();
         System.out.println();
 
-        item1.setStok(80);
+        item1.setStok(-5);
         item1.displayDetails();
     }
 }
